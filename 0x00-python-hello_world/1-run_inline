@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $PYCODE > tempFile
+python3 tempFile
