@@ -1,4 +1,2 @@
 #!/bin/bash
-echo $PYCODE > tempFile
-python3 tempFile
-rm tempFile
+python3 -c $PYCODE
