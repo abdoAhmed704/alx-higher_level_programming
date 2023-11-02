@@ -4,7 +4,7 @@ for i in range(0, 100):
         i = f"0{i}"
     else:
         i = f"{i}"
-    if int(i) != 98:
+    if int(i) != 99:
         print("{:s}".format(i), end=", ")
     else:
         print("{:s}".format(i))
