@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 for i in range(0, 99):
-    if i != 98:
-        print(f"{str(i).zfill(2)}", end=", ")
+    if i < 10:
+        i = f"0{i}"
     else:
-        print(f"{str(i).zfill(2)}")
+        i = f"{i}"
+    if int(i) != 98:
+        print("{:s}".format(i), end=", ")
+    else:
+        print("{:s}".format(i))
