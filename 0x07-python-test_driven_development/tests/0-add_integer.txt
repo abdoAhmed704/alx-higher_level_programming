@@ -1,0 +1,50 @@
+The ``0-add_integer`` module
+=============================
+
+Use ``add_integer``
+=====================
+
+Import func from module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+test one int argument:
+	>>> add_integer(3)
+	101
+
+test one float argument:
+	>>> add_integer(160.3)
+	258
+
+test one negative float argument:
+	>>> add_integer(-120.2)
+	-22
+
+test two int:
+	>>> add_integer(5, 5)
+	10
+
+test one negative and one positve int:
+	>>> add_integer(-15, 10)
+	-5
+
+test one negative int, one negative float:
+        >>> add_integer(-15, -10.5)
+	-25
+
+test two big int:
+        >>> add_integer(5959599592, 558245266)
+	6517844858
+
+test two strings:
+	>>> add_integer("fws", "eddw")
+    	Traceback (most recent call last):
+	        ...
+    	TypeError: a must be an integer
+
+Test both args invalid:
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
