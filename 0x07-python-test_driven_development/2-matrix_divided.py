@@ -15,7 +15,6 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: if div == 0
         TypeError: nums in matrix and div should be int ,float
         and Each row of the matrix must have the same size
-    
     Return:
         a new matrix
     """
@@ -25,7 +24,7 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    
+
     for i in matrix:
         if not isinstance(i, list) or len(i) == 0:
             raise TypeError("matrix must be a matrix (list of lists) " +
@@ -37,6 +36,7 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists) " +
                                 "of integers/floats")
     return [[round(num / div, 2) for num in i] for i in matrix]
+
 
 if __name__ == "__main__":
     import doctest
