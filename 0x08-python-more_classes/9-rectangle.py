@@ -59,7 +59,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return Rectangle(size, size)
+        return cls(size, size)
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
