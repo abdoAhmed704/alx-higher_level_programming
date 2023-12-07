@@ -39,6 +39,10 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     def area(self):
         return self.height * self.width
 
@@ -57,7 +61,7 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
-
+    
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -72,7 +76,3 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
