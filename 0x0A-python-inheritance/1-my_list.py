@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 ===========================
-Module with class MyList
+Module
 ===========================
 """
 
@@ -14,3 +14,8 @@ class MyList(list):
         """Methot that sorted a list"""
 
         print(sorted(list(self)))
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt")
