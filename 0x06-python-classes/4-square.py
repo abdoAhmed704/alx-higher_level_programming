@@ -19,7 +19,6 @@ class Square:
     def size(self):
         return self.__size
 
-
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
