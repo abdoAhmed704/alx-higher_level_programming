@@ -2,6 +2,6 @@
 #Read file
 
 def read_file(filename=""):
-    with open(filename, "r") as file:
+    with open(filename, encoding="UTF-8") as file:
         cont = file.read()
-        print(cont)
+        print(cont, end="")
