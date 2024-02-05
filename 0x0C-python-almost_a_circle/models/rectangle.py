@@ -1,25 +1,30 @@
 #!/usr/bin/python3
-"""inherits from Base"""
+"""Rectangle"""
 from models.base import Base
 
 
 class Rectangle(Base):
     """Rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
         super().__init__(id)
+        self.__width = 0
+        self.__height = 0
+        self.__x = 0
+        self.__y = 0
+
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
-        """w"""
+        """Get width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """w"""
+        """Set width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -28,12 +33,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """ww"""
+        """Get height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ww"""
+        """Set height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -42,28 +47,28 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """ww"""
+        """Get x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """ww"""
+        """Set x"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("x must be => 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
     def y(self):
-        """wwww"""
+        """Get y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """ww"""
+        """Set y"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be => 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
