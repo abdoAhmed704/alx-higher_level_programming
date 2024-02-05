@@ -1,16 +1,7 @@
 #!/usr/bin/python3
 """Rectangle"""
-# from models.base import Base
-class Base:
-    """Base class"""
-    __nb_objects = 0
+from models.base import Base
 
-    def __init__(self, id=None):
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
 
 class Rectangle(Base):
     """Rectangle class"""
@@ -97,11 +88,3 @@ class Rectangle(Base):
         he = self.height
         x = f"[Rectangle] ({self.id}) {self.x}/{self.y} - {wi}/{he}"
         return x
-
-r1 = Rectangle(2, 3, 2, 2)
-r1.display()
-
-print("---")
-
-r2 = Rectangle(3, 2, 1, 0)
-r2.display()
