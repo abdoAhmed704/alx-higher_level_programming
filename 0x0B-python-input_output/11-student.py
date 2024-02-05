@@ -21,4 +21,5 @@ class Student:
         Args:
             json (dict): The key/value pairs to replace attributes with.
         """
-        self.__dict__ = json
+        if isinstance(json, dict):
+            self.__dict__ = json
