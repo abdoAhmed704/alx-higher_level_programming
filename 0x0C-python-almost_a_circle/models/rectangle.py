@@ -14,32 +14,40 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """w"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """w"""
         self.__width = value
 
     @property
     def height(self):
+        """ww"""
         return self.__height
 
     @height.setter
     def width(self, value):
+        """ww"""
         self.__height = value
 
     @property
     def x(self):
+        """ww"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """ww"""
         self.__x = value
 
     @property
     def y(self):
+        """wwww"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """ww"""
         self.__y = value
