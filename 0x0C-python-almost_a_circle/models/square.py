@@ -22,3 +22,13 @@ class Square(Rectangle):
         """setting the size"""
         self.width = val
         self.height = val
+
+    def update(self, *args, **kwargs):
+        if args is not None and len(args) != 0:
+            lista = ["id", "size", "x", "y"]
+            for a, v in zip(lista, args):
+                setattr(self, a, v)
+        else:
+            for k, v in kwargs.items():
+                if hasattr(self, k):
+                    setattr(self, str(k), v)

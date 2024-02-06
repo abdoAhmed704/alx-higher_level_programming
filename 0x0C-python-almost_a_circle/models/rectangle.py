@@ -96,7 +96,6 @@ class Rectangle(Base):
             print("here")
             for attr, value in zip(attributes, args):
                 setattr(self, attr, value)
-                print("here")
         else:
             for k, v in kwargs.items():
                 if hasattr(self, k):
