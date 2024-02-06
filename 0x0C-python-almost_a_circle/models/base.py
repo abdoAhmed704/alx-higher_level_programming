@@ -30,6 +30,6 @@ class Base:
             pass
         else:
             for i in list_objs:
-                lista.append(i.to_dictionary(cls))
+                lista.append(i.to_dictionary())
         with open(file_name, "w") as file:
             file.write(cls.to_json_string(lista))
