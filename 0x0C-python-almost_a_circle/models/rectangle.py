@@ -93,7 +93,6 @@ class Rectangle(Base):
         """Update attributes of the rectangle"""
         attributes = ['id', 'width', 'height', 'x', 'y']
         if args is not None and len(args) != 0:
-            print("here")
             for attr, value in zip(attributes, args):
                 setattr(self, attr, value)
         else:
