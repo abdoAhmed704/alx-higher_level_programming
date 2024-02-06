@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+from models.rectangle import Rectangle
+
+
+class Square(Rectangle):
+    def __init__(self, size, x=0, y=0, id=None):
+        super().__init__(id, x, y, width, height)
+        self.width = self.height = size
+
+    def __str__(self):
+        x = f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return x
