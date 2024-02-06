@@ -43,6 +43,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """create"""
         if cls.__name__ == "Rectangle":
             new_ins = cls(4, 5)
         if cls.__name__ == "Square":
