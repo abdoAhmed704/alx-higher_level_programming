@@ -90,7 +90,7 @@ class Rectangle(Base):
         return x
 
     def update(self, *args):
-        "update"
-        self.id,
-        self.__width, self.__height,
-        self.__x, self.__y = args
+        """Update attributes of the rectangle"""
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        for attr, value in zip(attributes, args):
+            setattr(self, attr, value)
