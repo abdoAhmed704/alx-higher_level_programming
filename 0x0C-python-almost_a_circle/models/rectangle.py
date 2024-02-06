@@ -101,4 +101,5 @@ class Rectangle(Base):
                     setattr(self, str(k), v)
 
     def to_dictionary(self):
-        return self.__dict__()
+        """to_dictionary"""
+        return self.__dict__
