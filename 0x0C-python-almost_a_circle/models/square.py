@@ -24,11 +24,18 @@ class Square(Rectangle):
         self.height = val
 
     def update(self, *args, **kwargs):
-        if args is not None and len(args) != 0:
-            lista = ["id", "size", "x", "y"]
-            for a, v in zip(lista, args):
-                setattr(self, a, v)
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                if list_atr[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
+                    setattr(self, list_atr[i], args[i])
         else:
-            for k, v in kwargs.items():
-                if hasattr(self, k):
-                    setattr(self, str(k), v)
+            for key, value in kwargs.items():
+                if key == 'size':
+                    setattr(self, 'width', value)
+                    setattr(self, 'height', value)
+                else:
+                    setattr(self, key, value)
