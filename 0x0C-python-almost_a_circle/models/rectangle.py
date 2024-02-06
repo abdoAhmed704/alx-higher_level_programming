@@ -99,3 +99,6 @@ class Rectangle(Base):
             for k, v in kwargs.items():
                 if hasattr(self, k):
                     setattr(self, str(k), v)
+
+    def to_dictionary(self):
+        return self.__dict__
