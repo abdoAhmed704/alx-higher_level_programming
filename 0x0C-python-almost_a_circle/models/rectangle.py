@@ -102,4 +102,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """to_dictionary"""
-        return self.__dict__
+        lista = ["id", "width", "height", "x", "y"]
+        dicta = {}
+        for key in lista:
+            dicta[key] = getattr(self, key)
+        return dicta
