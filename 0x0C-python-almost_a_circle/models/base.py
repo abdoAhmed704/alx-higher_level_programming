@@ -53,6 +53,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """loads from file"""
         from os import path
         file_name = "{}.json".format(cls.__name__)
         if not path.isfile(file_name):
