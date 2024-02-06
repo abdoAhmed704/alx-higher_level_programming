@@ -23,7 +23,8 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        file_name = f"{cls.__name__}.json"
+        """save_to_file"""
+        file_name = "{}.json".format(cls.__name__)
         lista = []
         if list_objs is None:
             pass
