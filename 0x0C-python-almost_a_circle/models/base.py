@@ -50,3 +50,16 @@ class Base:
             new_ins = cls(45)
         new_ins.update(**dictionary)
         return new_ins
+
+    @classmethod
+    def load_from_file(cls):
+        from os import path
+        file_name = "{}.json".format(cls.__name__)
+        if not path.isfile(file_name):
+            return []
+        with open(file_name, "r") as f:
+            objs = cls.from_json_string(f.read())
+        list_obj = []
+        for obj in objs:
+            list_obj.append(cls.create(**obj))
+        return list_obj
