@@ -1,5 +1,7 @@
 -- inner join
-SELECT id, name 
+SELECT id, name
 FROM cities
-WHERE state_id = (SELECT state_id FROM states WHERE name = 'California')
+WHERE cities.state_id = states.id
+WHERE states.name = 'California'
 order by cities.id ASC;
+
