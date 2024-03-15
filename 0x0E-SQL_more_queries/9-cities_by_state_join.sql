@@ -1,4 +1,4 @@
 --
 SELECT id, name, name
-FROM cities c, states s
-WHERE s.id = c.state_id;
+FROM cities c inner join states s
+on s.id = c.state_id;
