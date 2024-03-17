@@ -8,9 +8,9 @@ if __name__ == "__main__":
     curs = db.cursor()
     mat = argv[4]
     curs.execute("""SELECT * FROM states WHERE name LIKE BINARY %s
-                    ORDER BY states.id""", (mat))
+                    ORDER BY states.id""", (mat,))
     data = curs.fetchall()
     for row in data:
-        print(row)s
+        print(row)
     curs.close()
     db.close()
