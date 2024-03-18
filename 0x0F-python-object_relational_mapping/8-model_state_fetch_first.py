@@ -17,9 +17,9 @@ if __name__ == "__main__":
 
     session = Session()
 
-    sts = session.query(State).order_by(State.id).all()
+    sts = session.query(State).order_by(State.id).first()
     if (sts):
-        print("{}: {}".format(sts[0].id, sts[0].name))
+        print("{}: {}".format(sts.id, sts.name))
     else:
         print("Nothing")
 
