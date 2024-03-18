@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     joins = session.query(City, State).\
         filter(City.state_id == State.id).all()
-    for hamza in joins:
-        print("{}: ({}) {}".format(hamza[1].name, hamza[0].id, hamza[0].name))
+    for hamza,abdo in joins:
+        print("{}: ({}) {}".format(abdo.name, hamza.id, hamza.name))
     session.commit()
     session.close()
