@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-CREATE TABLE FROM Py
+Start link class to table in database
 """
-from sqlalchemy import Integer, String, Column
+
+import sys
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
