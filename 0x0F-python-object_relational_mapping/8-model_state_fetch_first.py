@@ -22,5 +22,5 @@ if __name__ == "__main__":
         print("{}: {}".format(sts[0].id, sts[0].name))
     else:
         print("Nothing")
-    
+
     session.close()
