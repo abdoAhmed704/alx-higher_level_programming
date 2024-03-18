@@ -20,5 +20,5 @@ if __name__ == "__main__":
     sts = session.query(State).order_by(State.id).all()
     try:
         print("{}: {}".format(sts[0].id, sts[0].name))
-    except:
+    except Exception:
         print("Nothing")
