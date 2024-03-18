@@ -23,3 +23,5 @@ if __name__ == "__main__":
         print(sts[0].id)
     else:
         print("Not found")
+
+    session.close()
