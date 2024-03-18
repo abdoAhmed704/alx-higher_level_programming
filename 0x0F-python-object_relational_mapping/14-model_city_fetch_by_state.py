@@ -21,4 +21,5 @@ if __name__ == "__main__":
         City, State.id == City.state_id).order_by(City.id).all()
     for hamza in joins:
         print("{}: ({}) {}".format(hamza[1].name, hamza[0].id, hamza[0].name))
+    session.commit()
     session.close()
