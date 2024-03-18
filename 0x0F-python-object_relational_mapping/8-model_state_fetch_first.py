@@ -18,9 +18,9 @@ if __name__ == "__main__":
     session = Session()
 
     sts = session.query(State).order_by(State.id).all()
-    try:
+    if (sts):
         print("{}: {}".format(sts[0].id, sts[0].name))
-    except Exception:
+    else:
         print("Nothing")
     
     session.close()
