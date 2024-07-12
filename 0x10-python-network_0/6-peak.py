@@ -4,7 +4,7 @@
 
 def find_peak(lista):
     """the peak"""
-    if list_of_integers is None or list_of_integers == []:
+    if lista is None or lista == []:
         return None
     lista.sort()
     return lista[-1]
