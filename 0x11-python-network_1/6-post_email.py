@@ -7,4 +7,5 @@ if __name__ == "__main__":
     import sys
     pram = {"email": sys.argv[2]}
     res = requests.post(sys.argv[1], data=pram)
-    print('Your email is:', res.json()['form'])
+    response_json = res.json()
+    print('Your email is:', response_json["form"]["email"])
