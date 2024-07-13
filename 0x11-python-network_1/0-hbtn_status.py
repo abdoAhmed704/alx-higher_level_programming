@@ -2,7 +2,7 @@
 """hbtn_status"""
 
 if __name__ == "__main__":
-    import urllib.request
+    from urllib import request
     with request.urlopen("https://alx-intranet.hbtn.io/status") as res:
         data = res.read()
         print('Body response:$')
